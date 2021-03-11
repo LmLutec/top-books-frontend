@@ -11,3 +11,5 @@ class BookContainer extends Component {
         )
     }
 }
+
+export default BookContainer;
