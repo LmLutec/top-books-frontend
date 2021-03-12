@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
 
 
 
-const TopBooks = () => {
+class TopBooks extends Component {
 
-    // const [books, setBooks] = useState([]);
-    let books = [];
+  state = {};
+    
+    
 
-    function getTopBooks(){
+    getTopBooks(){
         fetch("https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=pccZUGYERtQZfu94bOCqSmWa6RaGL10Q")
             .then(response => {
                 return response.json();
@@ -18,22 +19,30 @@ const TopBooks = () => {
             });
     }
 
-    function addBooksToArray (arr){
+    addBooksToArray (arr){
         arr.map((element) => {
             books.push(element)
         }); 
+
         
-        
-        console.log(books)
+    function displayBooks(){
+        books.forEach((book)=> {
+            console.log(book);
+        });
     }
-
-
+        
+}
+    render(){
         return(
             <div>
                 <h1>Top Books</h1>
                 {getTopBooks()}
             </div>
         )
+    }
+
+
+        
 };
 
 export default TopBooks;
