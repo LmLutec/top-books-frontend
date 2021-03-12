@@ -2,12 +2,15 @@ import React from 'react';
 
 
 const Book = (props) => {
-    const book = props.book
+    const book = props;
 
-console.log(props)
+
         return(
             <div>
-                <h1>Book info below:</h1>
+                <h1>{book.title}</h1>
+                <h3>{book.author}</h3>
+                <p>{book.description}</p>
+                <p>{book.publisher}</p>
             </div>
         )
 
