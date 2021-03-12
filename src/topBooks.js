@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Book from './book';
 
 
 
@@ -17,23 +17,15 @@ class TopBooks extends Component {
                 return response.json();
             })
             .then(json => {
-                console.log('data received')
                 this.state.books.push(json.results)
                 this.displayBooks()
-                // this.addBooksToArray(json.results);
             });
     }
-
-    addBooksToArray = (arr) => {
-        return arr.map((element, id) => <li key={id}>{element.title}</li>); 
-    };
         
     displayBooks = () => {
-        console.log(this.state.books.flat())
-        this.state.books.flat().map((book)=> {
-            console.log(book.title);
-        });
+        return this.state.books.flat().map((book)=> <Book title={book.title} />) ;
     }
+
         
 
     render(){

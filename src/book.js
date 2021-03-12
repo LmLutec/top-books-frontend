@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 
 
 class Book extends Component {
+
+
+
     render(){
         return(
             <div>
-                <p>Rate this book</p>
+                {this.props.title}
             </div>
         )
     }
