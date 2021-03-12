@@ -1,38 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 
 
 
-class TopBooks extends Component {
+const TopBooks = () => {
 
-    getTopBooks = () => {
+    // const [books, setBooks] = useState([]);
+    let books = [];
+
+    function getTopBooks(){
         fetch("https://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=pccZUGYERtQZfu94bOCqSmWa6RaGL10Q")
             .then(response => {
                 return response.json();
             })
             .then(json => {
-                console.log(json);
+                addBooksToArray(json.results);
             });
     }
 
-    // return (dispatch) => {
-    //     fetch(`https://alwaysonthego.herokuapp.com/api/v1/foodtrucks/${foodtruck.id}`, formData)
-    //     .then(response => {
-    //         return response.json()
-    // }).then(json => {
-    //            dispatch({type: 'EDIT_TRUCK', truck: json})
-    //     })
-    // }
+    function addBooksToArray (arr){
+        arr.map((element) => {
+            books.push(element)
+        }); 
+        
+        
+        console.log(books)
+    }
 
 
-    render(){
         return(
             <div>
                 <h1>Top Books</h1>
-                {this.getTopBooks()}
+                {getTopBooks()}
             </div>
         )
-    }
 };
 
 export default TopBooks;
