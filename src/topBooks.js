@@ -30,8 +30,8 @@ class TopBooks extends Component {
         
     displayBooks = () => {
         console.log(this.state.books.flat())
-        this.state.books.map((book)=> {
-            console.log(book[0].title);
+        this.state.books.flat().map((book)=> {
+            console.log(book.title);
         });
     }
         
