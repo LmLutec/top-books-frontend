@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Book from './book';
+import BookReviews from './BookReviews';
 
 
 
@@ -12,8 +13,6 @@ class TopBooks extends Component {
         };
     }
   
-    
-    
 
     
     async componentDidMount(){
@@ -24,7 +23,7 @@ class TopBooks extends Component {
          
         
     showBooks = () => {
-        
+        // add isbn numbers
         return this.state.books.map((book, id) => <Book key={id} title={book.title} author={book.author} description={book.description} publisher={book.publisher}/>);
     }
         
@@ -34,8 +33,9 @@ class TopBooks extends Component {
     render(){
         return(
             <div>
-                <h1>Top Books</h1>
+                <h1>Best-Sellers</h1>
                 {this.showBooks()}
+                {<BookReviews />}
             </div>
         )
     }
