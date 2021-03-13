@@ -6,7 +6,7 @@ const Book = (props) => {
 
 
         return(
-            <div>
+            <div className="bookInfo">
                 <h1>{book.title}</h1>
                 <h3>{book.author}</h3>
                 <p>{book.description}</p>

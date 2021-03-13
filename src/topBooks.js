@@ -32,7 +32,7 @@ class TopBooks extends Component {
 
     render(){
         return(
-            <div>
+            <div className="topBooks">
                 <h1>Best-Sellers</h1>
                 {this.showBooks()}
                 {<BookReviews />}

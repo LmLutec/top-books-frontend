@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.bookInfo{
+  padding: 20px;
+  /* align-content: center;
+  justify-content: center; */
+}
+
+.topBooks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
