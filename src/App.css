@@ -38,7 +38,9 @@
 }
 
 .bookInfo{
-  padding: 20px;
+  padding: 10px;
+  background-color: antiquewhite;
+  margin: 10px;
 }
 
 .topBooks {
@@ -51,7 +53,7 @@
 }
 
 html { 
-  background: url("https://i.pinimg.com/736x/f0/18/8a/f0188a4680b2ef1ef813b9602b990798.jpg") no-repeat center center fixed; 
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -61,3 +63,11 @@ html {
 p {
   text-align: center;
 }
+
+
+/* body {
+  background-color: #E5E5F7;
+  opacity: 0.4;
+  background: radial-gradient(circle, transparent 20%, #E5E5F7 20%, #E5E5F7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #E5E5F7 20%, #E5E5F7 80%, transparent 80%, transparent) 50px 50px, linear-gradient(#afb0c2 4px, transparent 4px) 0 -2px, linear-gradient(90deg, #afb0c2 4px, #E5E5F7 4px) -2px 0;
+  background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+} */
