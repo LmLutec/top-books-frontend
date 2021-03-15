@@ -29,10 +29,11 @@ class TopBooks extends Component {
         return this.state.books.map((book, id) => <Book key={id} title={book.title} author={book.author} description={book.description} publisher={book.publisher}/>);
     }
         
-    changeToRed = () => {
+    changeToRed = (e,src) => {
         // let bodyTag = document.getElementsByTagName('body')
         // bodyTag.background-color = red;
-        document.body.style.background = "red";
+        console.log(e.target.id)
+        document.body.style.background = `${e.target.id}`;
         this.setState({
             color: "green"
         });
@@ -51,8 +52,8 @@ class TopBooks extends Component {
         return(
             <div className="topBooks" style={{color: this.state.color}}>
                 <div className="colors">
-                    <img src="./images/purple.png" className="color"></img>
-                    <img src="./images/yellow.png" className="color"></img>
+                    <img src="./images/purple.png" className="color" id= "#5014B8" onClick={(e) => this.changeToRed(e)}></img>
+                    <img src="./images/yellow.png" className="color" id= "yellow" onClick={(e) => this.changeToRed(e)}></img>
                 </div>
                
                 <h1 style={{color: "white"}}>New York Times Best-Sellers</h1>

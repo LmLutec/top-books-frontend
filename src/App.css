@@ -52,6 +52,13 @@
   font-family: 'Syne Mono', monospace;
 }
 
+div.colors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
 html { 
   background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80") no-repeat center center fixed; 
   -webkit-background-size: cover;
