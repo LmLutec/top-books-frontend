@@ -60,6 +60,12 @@ html {
   background-size: cover;
 }
 
+img.color {
+  height: 10%;
+  width: 10%;
+  padding: 5%;
+}
+
 p {
   text-align: center;
 }

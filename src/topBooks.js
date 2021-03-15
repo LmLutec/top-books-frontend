@@ -1,3 +1,4 @@
+import { getQueriesForElement } from '@testing-library/dom';
 import React, { Component } from 'react';
 import Book from './book';
 import BookReviews from './BookReviews';
@@ -9,7 +10,8 @@ class TopBooks extends Component {
         super(props)
 
         this.state = {
-            books: []
+            books: [],
+            color: 'white'
         };
     }
   
@@ -31,14 +33,28 @@ class TopBooks extends Component {
         // let bodyTag = document.getElementsByTagName('body')
         // bodyTag.background-color = red;
         document.body.style.background = "red";
+        this.setState({
+            color: "green"
+        });
+
+
+        
+        // div.changeColor = "green";
+        // document.p.style.color = "white";
         // console.log(bodyTag)
     }
      
+    
         
 
     render(){
         return(
-            <div className="topBooks">
+            <div className="topBooks" style={{color: this.state.color}}>
+                <div className="colors">
+                    <img src="./images/purple.png" className="color"></img>
+                    <img src="./images/yellow.png" className="color"></img>
+                </div>
+               
                 <h1 style={{color: "white"}}>New York Times Best-Sellers</h1>
                 {this.showBooks()}
                 <button onClick= {this.changeToRed}>Change to Red</button>
