@@ -27,7 +27,13 @@ class TopBooks extends Component {
         return this.state.books.map((book, id) => <Book key={id} title={book.title} author={book.author} description={book.description} publisher={book.publisher}/>);
     }
         
-    
+    changeToRed = () => {
+        // let bodyTag = document.getElementsByTagName('body')
+        // bodyTag.background-color = red;
+        document.body.style.background = "red";
+        // console.log(bodyTag)
+    }
+     
         
 
     render(){
@@ -35,6 +41,7 @@ class TopBooks extends Component {
             <div className="topBooks">
                 <h1 style={{color: "white"}}>New York Times Best-Sellers</h1>
                 {this.showBooks()}
+                <button onClick= {this.changeToRed}>Change to Red</button>
             </div>
         )
     }
