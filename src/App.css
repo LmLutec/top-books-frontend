@@ -39,8 +39,6 @@
 
 .bookInfo{
   padding: 20px;
-  /* align-content: center;
-  justify-content: center; */
 }
 
 .topBooks {
@@ -49,4 +47,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Syne Mono', monospace;
+}
+
+html { 
+  background: url("https://i.pinimg.com/736x/f0/18/8a/f0188a4680b2ef1ef813b9602b990798.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p {
+  text-align: center;
 }

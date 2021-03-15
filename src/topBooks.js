@@ -33,9 +33,8 @@ class TopBooks extends Component {
     render(){
         return(
             <div className="topBooks">
-                <h1>Best-Sellers</h1>
+                <h1>New York Times Best-Sellers</h1>
                 {this.showBooks()}
-                {<BookReviews />}
             </div>
         )
     }

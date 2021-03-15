@@ -7,10 +7,10 @@ const Book = (props) => {
 
         return(
             <div className="bookInfo">
-                <h1>{book.title}</h1>
-                <h3>{book.author}</h3>
-                <p>{book.description}</p>
-                <p>{book.publisher}</p>
+                {book.title ? <h2>Title: {book.title}</h2> : <h2>Untitled</h2>}
+                {book.author ? <h3>Author: {book.author}</h3> : <h3>Unknown</h3>}
+                {book.description ? <p>Description: {book.description}</p> : <p>No description provided</p>}
+                {book.publisher ? <p>Publisher: {book.publisher}</p> : <p>No publisher information</p>}
             </div>
         )
 
