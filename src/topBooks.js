@@ -57,6 +57,7 @@ class TopBooks extends Component {
                     <img src="./images/green.png" className="color" id="#58B814" onClick={(e) => this.changeToRed(e)}></img>
                     <img src="./images/red.png" className="color" id="#FE2712" onClick={(e) => this.changeToRed(e)}></img>
                     <img src="./images/orange.png" className="color" id="#FB8604" onClick={(e) => this.changeToRed(e)}></img>
+                    <img src="./images/blue.png" className="color" id="#1258DC" onClick={(e) => this.changeToRed(e)}></img>
                 </div>
                
                 <h1 style={{color: "white"}}>New York Times Best-Sellers</h1>
