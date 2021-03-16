@@ -11,7 +11,7 @@ class TopBooks extends Component {
 
         this.state = {
             books: [],
-            color: 'white'
+            color: ''
         };
     }
   
@@ -29,20 +29,13 @@ class TopBooks extends Component {
         return this.state.books.map((book, id) => <Book key={id} title={book.title} author={book.author} description={book.description} publisher={book.publisher}/>);
     }
         
-    changeToRed = (e,src) => {
-        // let bodyTag = document.getElementsByTagName('body')
-        // bodyTag.background-color = red;
-        console.log(e.target.id)
+    changeToRed = (e) => {
+        
         document.body.style.background = `${e.target.id}`;
         this.setState({
             color: "green"
         });
 
-
-        
-        // div.changeColor = "green";
-        // document.p.style.color = "white";
-        // console.log(bodyTag)
     }
      
     
@@ -62,7 +55,6 @@ class TopBooks extends Component {
                
                 <h1 style={{color: "white"}}>New York Times Best-Sellers</h1>
                 {this.showBooks()}
-                <button onClick= {this.changeToRed}>Change to Red</button>
             </div>
         )
     }
