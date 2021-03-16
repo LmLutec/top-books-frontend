@@ -68,9 +68,10 @@ html {
 }
 
 img.color {
-  height: 10%;
-  width: 10%;
-  padding: 5%;
+  padding: 15px;
+  width:  75px;
+  height: 25px;
+  object-fit: cover;
 }
 
 p {
